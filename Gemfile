@@ -98,10 +98,10 @@ group :development, :test do
   gem 'ffaker', '~> 2.23'
   gem 'parallel', '~> 1.24'
   gem 'annotate', '~> 3.2'
-  gem 'rubocop', '~> 1.62', '>= 1.62.1'
+  gem 'rubocop', '~> 1.62', '>= 1.62.1', require: false
   gem 'rubocop-rspec', '~> 2.28'
   gem 'rubocop-performance', '~> 1.21'
-  gem 'rubocop-rails', '~> 2.24', '>= 2.24.1'
+  gem 'rubocop-rails', '~> 2.24', '>= 2.24.1', require: false
   gem 'web-console', '~> 4.2', '>= 4.2.1'
 
   # Review tools
