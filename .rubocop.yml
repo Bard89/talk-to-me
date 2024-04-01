@@ -1,5 +1,3 @@
-inherit_from: .rubocop_todo.yml
-
 require:
   - rubocop-rspec
   - rubocop-rails
@@ -9,12 +7,16 @@ AllCops:
   Exclude:
     - 'db/**/*'
     - 'config/**/*'
-    - 'bin/{rails,rake}'
-    - 'initializers/**/*'
+    - 'vendor/**/*'
+    - 'bin/{rails,rake,bundle}'
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 Style/Documentation:
   Exclude:
-    - '../app/controllers/**/*'
-    - '../app/helpers/**/*'
-    - '../app/models/**/*'
+    - 'app/controllers/**/*'
+    - 'app/helpers/**/*'
+    - 'app/models/**/*'
+    - 'app/mailers/**/*'
+Layout/LineLength:
+  Exclude:
+    - 'initializers/**/*'

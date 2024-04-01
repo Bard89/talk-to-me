@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -33,7 +35,7 @@ gem "redis", "~> 4.0"
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
@@ -74,7 +76,6 @@ gem "devise", "~> 4.9", ">= 4.9.3"
 # gem 'email_validator', '~> 2.2', '>= 2.2.4'
 # gem 'discard', '~> 1.3'
 
-
 # Pagination
 # gem 'pagy', '~> 7.0', '>= 7.0.11'
 
@@ -84,20 +85,19 @@ gem "devise", "~> 4.9", ">= 4.9.3"
 # Forms Extensions
 gem "simple_form", "~> 5.3"
 
-
 # IRB
-gem "amazing_print", "~> 1.6", require: false
-gem "rainbow", "~> 3.0"
+# gem "amazing_print", "~> 1.6", require: false
+# gem "rainbow", "~> 3.0"
 
 group :development, :test do
   gem "annotate", "~> 3.2"
-  gem "bullet", "~> 7.0", ">= 7.0.1"
-  gem "byebug", platforms: %i[ mri mingw x64_mingw ]
-  gem "capybara", "~> 3.40"
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  # gem "bullet", "~> 7.0", ">= 7.0.1"
+  gem "byebug", platforms: %i[mri mingw x64_mingw]
+  # gem "capybara", "~> 3.40"
+  # gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "factory_bot_rails", "~> 6.4", ">= 6.4.3"
   gem "ffaker", "~> 2.23"
-  gem "parallel", "~> 1.24"
+  # gem "parallel", "~> 1.24"
   gem "rubocop", "~> 1.62", ">= 1.62.1", require: false
   gem "rubocop-performance", "~> 1.21"
   gem "rubocop-rails", "~> 2.24", ">= 2.24.1", require: false
@@ -105,10 +105,9 @@ group :development, :test do
   gem "web-console", "~> 4.2", ">= 4.2.1"
 
   # Review tools
-  gem "pronto"
-  gem "pronto-rubocop", require: false
+  # gem "pronto"
+  # gem "pronto-rubocop", require: false
 end
 
-group :production do
-end
-
+# group :production do
+# end
