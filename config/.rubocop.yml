@@ -1,3 +1,20 @@
 inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rspec
+  - rubocop-rails
+  - rubocop-performance
 AllCops:
   NewCops: enable
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'bin/{rails,rake}'
+    - 'initializers/**/*'
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Style/Documentation:
+  Exclude:
+    - '../app/controllers/**/*'
+    - '../app/helpers/**/*'
+    - '../app/models/**/*'

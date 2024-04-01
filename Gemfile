@@ -4,8 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.3.0"
 
 # Framework
-gem 'rails', '~> 7.1', '>= 7.1.3.2'
-gem 'pg', '~> 1.5', '>= 1.5.6'
+gem "pg", "~> 1.5", ">= 1.5.6"
+gem "rails", "~> 7.1", ">= 7.1.3.2"
 # gem 'seedbank', '~> 0.5.0'
 # gem 'sentry-rails', '~> 5.17', '>= 5.17.1'
 # gem 'sentry-ruby', '~> 5.17', '>= 5.17.1'
@@ -52,7 +52,7 @@ gem "bootsnap", require: false
 # gem 'grape-swagger-rails', '~> 0.4.0'
 
 # Authentication
-gem 'devise', '~> 4.9', '>= 4.9.3'
+gem "devise", "~> 4.9", ">= 4.9.3"
 
 # Authorization
 # gem 'cancancan', '~> 3.5'
@@ -82,31 +82,31 @@ gem 'devise', '~> 4.9', '>= 4.9.3'
 # gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
 
 # Forms Extensions
-gem 'simple_form', '~> 5.3'
+gem "simple_form", "~> 5.3"
 
 
 # IRB
-gem 'amazing_print', '~> 1.6', require: false
-gem 'rainbow', '~> 3.0'
+gem "amazing_print", "~> 1.6", require: false
+gem "rainbow", "~> 3.0"
 
 group :development, :test do
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "annotate", "~> 3.2"
+  gem "bullet", "~> 7.0", ">= 7.0.1"
   gem "byebug", platforms: %i[ mri mingw x64_mingw ]
-  gem 'capybara', '~> 3.40'
-  gem 'factory_bot_rails', '~> 6.4', '>= 6.4.3'
-  gem 'bullet', '~> 7.0', '>= 7.0.1'
-  gem 'ffaker', '~> 2.23'
-  gem 'parallel', '~> 1.24'
-  gem 'annotate', '~> 3.2'
-  gem 'rubocop', '~> 1.62', '>= 1.62.1', require: false
-  gem 'rubocop-rspec', '~> 2.28'
-  gem 'rubocop-performance', '~> 1.21'
-  gem 'rubocop-rails', '~> 2.24', '>= 2.24.1', require: false
-  gem 'web-console', '~> 4.2', '>= 4.2.1'
+  gem "capybara", "~> 3.40"
+  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "factory_bot_rails", "~> 6.4", ">= 6.4.3"
+  gem "ffaker", "~> 2.23"
+  gem "parallel", "~> 1.24"
+  gem "rubocop", "~> 1.62", ">= 1.62.1", require: false
+  gem "rubocop-performance", "~> 1.21"
+  gem "rubocop-rails", "~> 2.24", ">= 2.24.1", require: false
+  gem "rubocop-rspec", "~> 2.28"
+  gem "web-console", "~> 4.2", ">= 4.2.1"
 
   # Review tools
-  gem 'pronto'
-  gem 'pronto-rubocop', require: false
+  gem "pronto"
+  gem "pronto-rubocop", require: false
 end
 
 group :production do
