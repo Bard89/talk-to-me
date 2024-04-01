@@ -1,4 +1,10 @@
-# README
+# Talk-to-me
+Vision -> Rails app that should serve as a replacement for Speechify. Reads text / pdf / link and plays it back. Also supports mp3 download.  
+
+## Instructions
+### Run locally
+#### Setup
+TODO; Write local setup
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
