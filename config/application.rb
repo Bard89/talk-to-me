@@ -33,5 +33,9 @@ module TalkToMe
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    console do
+      ARGV.push '-r', root.join('lib/console.rb')
+    end
   end
 end

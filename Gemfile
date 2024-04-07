@@ -87,8 +87,8 @@ gem "enumerize", "~> 2.8", ">= 2.8.1"
 gem "simple_form", "~> 5.3"
 
 # IRB
-# gem "amazing_print", "~> 1.6", require: false
-# gem "rainbow", "~> 3.0"
+gem "amazing_print", "~> 1.6", require: false
+# gem "rainbow", "~> 3.1", ">= 3.1.1" # TODO; use later to distinguish development and production envrioments
 
 group :development, :test do
   gem "annotate", "~> 3.2"
