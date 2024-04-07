@@ -99,6 +99,7 @@ group :development, :test do
   gem "factory_bot_rails", "~> 6.4", ">= 6.4.3"
   gem "ffaker", "~> 2.23"
   # gem "parallel", "~> 1.24"
+  gem "execjs", "~> 2.9", ">= 2.9.1" # rewuired after adding the pre-commit
   gem "pre-commit", "~> 0.40.0", require: false
   gem "rubocop", "~> 1.62", ">= 1.62.1", require: false
   gem "rubocop-performance", "~> 1.21"
