@@ -106,7 +106,7 @@ group :development, :test do
 
   # Review tools
   gem "pronto"
-  gem "pronto-rubocop", require: fralse
+  gem "pronto-rubocop", require: false
 end
 
 # group :production do
