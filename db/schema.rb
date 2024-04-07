@@ -22,6 +22,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_07_133849) do
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_documents_on_user_id"
   end
 
   create_table "transcriptions", force: :cascade do |t|
