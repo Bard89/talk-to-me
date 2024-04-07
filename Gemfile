@@ -71,6 +71,7 @@ gem "devise", "~> 4.9", ">= 4.9.3"
 #
 
 # Model Extensions
+gem 'enumerize', '~> 2.8', '>= 2.8.1'
 # gem 'auto_strip_attributes', '~> 2.6'
 # gem 'counter_culture', '~> 3.5', '>= 3.5.3'
 # gem 'email_validator', '~> 2.2', '>= 2.2.4'
