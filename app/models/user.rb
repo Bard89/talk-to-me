@@ -27,6 +27,7 @@ class User < ApplicationRecord
   # endregion
 
   # region Associations
+  has_many :documents, dependent: :destroy
   # endregion
 
   # region Attribute macros

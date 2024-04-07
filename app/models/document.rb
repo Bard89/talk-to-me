@@ -20,6 +20,8 @@ class Document < ApplicationRecord
   # endregion
 
   # region Associations
+  belongs_to :user
+  has_one :transcription, dependent: :destroy
   # endregion
 
   # region Attribute macros

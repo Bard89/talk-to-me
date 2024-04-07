@@ -18,6 +18,7 @@ class Transcription < ApplicationRecord
   # endregion
 
   # region Associations
+  belongs_to :document
   # endregion
 
   # region Attribute macros
