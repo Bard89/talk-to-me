@@ -250,6 +250,8 @@ GEM
     rubocop-rspec_rails (2.28.2)
       rubocop (~> 1.40)
     ruby-progressbar (1.13.0)
+    seedbank (0.5.0)
+      rake (>= 10.0)
     simple_form (5.3.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
@@ -310,6 +312,7 @@ DEPENDENCIES
   rubocop-performance (~> 1.21)
   rubocop-rails (~> 2.24, >= 2.24.1)
   rubocop-rspec (~> 2.28)
+  seedbank (~> 0.5.0)
   simple_form (~> 5.3)
   sprockets-rails
   stimulus-rails

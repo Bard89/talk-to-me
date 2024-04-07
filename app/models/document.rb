@@ -25,6 +25,7 @@ class Document < ApplicationRecord
   # endregion
 
   # region Attribute macros
+  enum status: { pending: 0, processing: 1, completed: 2 }
   # endregion
 
   # region Scopes
