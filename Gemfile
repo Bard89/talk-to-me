@@ -99,12 +99,12 @@ group :development, :test do
   gem "factory_bot_rails", "~> 6.4", ">= 6.4.3"
   gem "ffaker", "~> 2.23"
   # gem "parallel", "~> 1.24"
+  gem "pre-commit", "~> 0.40.0", require: false
   gem "rubocop", "~> 1.62", ">= 1.62.1", require: false
   gem "rubocop-performance", "~> 1.21"
   gem "rubocop-rails", "~> 2.24", ">= 2.24.1", require: false
   gem "rubocop-rspec", "~> 2.28"
   gem "web-console", "~> 4.2", ">= 4.2.1"
-
   # Review tools
   gem "pronto"
   gem "pronto-rubocop", require: false
