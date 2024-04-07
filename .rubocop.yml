@@ -1,0 +1,23 @@
+require:
+  - rubocop-rspec
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-factory_bot
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'vendor/**/*'
+    - 'bin/{rails,rake,bundle}'
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Style/Documentation:
+  Exclude:
+    - 'app/controllers/**/*'
+    - 'app/helpers/**/*'
+    - 'app/models/**/*'
+    - 'app/mailers/**/*'
+Layout/LineLength:
+  Exclude:
+    - 'initializers/**/*'

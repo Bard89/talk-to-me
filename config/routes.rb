@@ -1,6 +1,11 @@
-Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+# == Route Map
+#
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+Rails.application.routes.draw do
+  devise_for :users
+  resources :documents do
+    resource :transcription, only: [:show, :create, :update]
+  end
+  root 'documents#index'
 end
+
