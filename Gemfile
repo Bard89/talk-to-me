@@ -8,7 +8,7 @@ ruby "3.3.0"
 # Framework
 gem "pg", "~> 1.5", ">= 1.5.6"
 gem "rails", "~> 7.1", ">= 7.1.3.2"
-# gem 'seedbank', '~> 0.5.0'
+gem 'seedbank', '~> 0.5.0'
 # gem 'sentry-rails', '~> 5.17', '>= 5.17.1'
 # gem 'sentry-ruby', '~> 5.17', '>= 5.17.1'
 # gem 'sentry-sidekiq', '~> 5.17', '>= 5.17.1'
