@@ -19,9 +19,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   # region Constants
+  ROLES = %i[normie sysadmin].freeze
   # endregion
 
-  # region Extensions
+  # region Extension
+  extend Enumerize
   # endregion
 
   # region Associations
@@ -29,6 +31,7 @@ class User < ApplicationRecord
   # endregion
 
   # region Attribute macros
+  enumerize :role, in: ROLES, default: :normie, predicates: true, scope: true
   # endregion
 
   # region Scopes
