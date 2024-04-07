@@ -88,7 +88,7 @@ gem "simple_form", "~> 5.3"
 
 # IRB
 gem "amazing_print", "~> 1.6", require: false
-# gem "rainbow", "~> 3.1", ">= 3.1.1" # TODO; use later to distinguish development and production envrioments
+# gem "rainbow", "~> 3.1", ">= 3.1.1" # TODO; use later to distinguish development and production environments
 
 group :development, :test do
   gem "annotate", "~> 3.2"

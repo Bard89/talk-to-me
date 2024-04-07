@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 after 'development:users' do
-  puts
-  puts 'Seeding Documents and transcriptions'
+  notify __FILE__
 
   User.find_each do |user|
     rand(1..5).times do

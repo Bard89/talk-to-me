@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-puts 'Seeding Users'
-
+notify __FILE__
 User.create!(
   email: "info@talktome.com",
   password: '12345678',
