@@ -21,6 +21,7 @@ entity "Documents" {
   *id: integer
   --
   user_id: integer
+  *title: string
   *document_type: string
   *content: text
   *status: integer

@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :documents do
     resource :transcription, only: [:show, :create, :update]
   end
-  root 'home#index' # You will create this controller and view later for the landing page.
+  root 'documents#index'
 end
 
