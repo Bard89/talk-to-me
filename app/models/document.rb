@@ -6,17 +6,20 @@
 #
 #  id            :bigint           not null, primary key
 #  user_id       :integer
+#  title         :string
 #  document_type :string
 #  content       :text
-#  status        :integer
+#  status        :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #
 class Document < ApplicationRecord
   # region Constants
+  STATUS = %w[pending processing completed failed].freeze
   # endregion
 
   # region Extensions
+  extend Enumerize
   # endregion
 
   # region Associations
@@ -25,7 +28,7 @@ class Document < ApplicationRecord
   # endregion
 
   # region Attribute macros
-  enum status: { pending: 0, processing: 1, completed: 2 }
+  enumerize :status, in: STATUS, default: :pending, predicates: true, scope: true
   # endregion
 
   # region Scopes

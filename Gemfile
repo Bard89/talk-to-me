@@ -72,6 +72,7 @@ gem "cancancan", "~> 3.5"
 
 # Model Extensions
 gem "enumerize", "~> 2.8", ">= 2.8.1"
+# gem 'polymorphic_integer_type', '~> 3.2', '>= 3.2.2' # TODO; implement after it suports current rails
 # gem 'auto_strip_attributes', '~> 2.6'
 # gem 'counter_culture', '~> 3.5', '>= 3.5.3'
 # gem 'email_validator', '~> 2.2', '>= 2.2.4'

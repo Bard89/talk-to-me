@@ -12,6 +12,7 @@
 #  remember_created_at    :datetime
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  role                   :string           default("normie")
 #
 class User < ApplicationRecord
   # Include default devise modules. Others available are:

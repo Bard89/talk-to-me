@@ -346,9 +346,11 @@
                   <RakeTaskImpl id="development">
                     <subtasks>
                       <RakeTaskImpl description="Load the seed data from db/seeds/development/documents.seeds.rb" fullCommand="db:seed:development:documents" id="documents" />
+                      <RakeTaskImpl description="Load the seed data from db/seeds/development/transcription.seeds.rb" fullCommand="db:seed:development:transcription" id="transcription" />
                       <RakeTaskImpl description="Load the seed data from db/seeds/development/users.seeds.rb" fullCommand="db:seed:development:users" id="users" />
                     </subtasks>
                   </RakeTaskImpl>
+                  <RakeTaskImpl description="Load the seed data from db/seeds.rb" fullCommand="db:seed:original" id="original" />
                   <RakeTaskImpl description="Truncate tables of each database for current environment and load the seeds" fullCommand="db:seed:replant" id="replant" />
                 </subtasks>
               </RakeTaskImpl>
