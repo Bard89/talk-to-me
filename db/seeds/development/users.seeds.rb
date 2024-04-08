@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 
-puts 'Seeding Users'
+notify __FILE__
+seed User,
+  email: "info@talktome.com",
+  password: '12345678',
+  role: 'sysadmin'
 
 5.times do
-  User.create!(
+  seed User,
     email: FFaker::Internet.email,
-    password: '12345678',
-  )
-  print '.'
+    password: '12345678'
 end

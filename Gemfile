@@ -57,7 +57,7 @@ gem "bootsnap", require: false
 gem "devise", "~> 4.9", ">= 4.9.3"
 
 # Authorization
-# gem 'cancancan', '~> 3.5'
+gem "cancancan", "~> 3.5"
 # gem 'pretender', '~> 0.5.0'
 
 # Eco system
@@ -71,6 +71,8 @@ gem "devise", "~> 4.9", ">= 4.9.3"
 #
 
 # Model Extensions
+gem "enumerize", "~> 2.8", ">= 2.8.1"
+# gem 'polymorphic_integer_type', '~> 3.2', '>= 3.2.2' # TODO; implement after it suports current rails
 # gem 'auto_strip_attributes', '~> 2.6'
 # gem 'counter_culture', '~> 3.5', '>= 3.5.3'
 # gem 'email_validator', '~> 2.2', '>= 2.2.4'
@@ -86,8 +88,8 @@ gem "devise", "~> 4.9", ">= 4.9.3"
 gem "simple_form", "~> 5.3"
 
 # IRB
-# gem "amazing_print", "~> 1.6", require: false
-# gem "rainbow", "~> 3.0"
+gem "amazing_print", "~> 1.6", require: false
+# gem "rainbow", "~> 3.1", ">= 3.1.1" # TODO; use later to distinguish development and production environments
 
 group :development, :test do
   gem "annotate", "~> 3.2"
@@ -98,12 +100,13 @@ group :development, :test do
   gem "factory_bot_rails", "~> 6.4", ">= 6.4.3"
   gem "ffaker", "~> 2.23"
   # gem "parallel", "~> 1.24"
+  gem "execjs", "~> 2.9", ">= 2.9.1" # rewuired after adding the pre-commit
+  gem "pre-commit", "~> 0.40.0", require: false
   gem "rubocop", "~> 1.62", ">= 1.62.1", require: false
   gem "rubocop-performance", "~> 1.21"
   gem "rubocop-rails", "~> 2.24", ">= 2.24.1", require: false
   gem "rubocop-rspec", "~> 2.28"
   gem "web-console", "~> 4.2", ">= 4.2.1"
-
   # Review tools
   gem "pronto"
   gem "pronto-rubocop", require: false
