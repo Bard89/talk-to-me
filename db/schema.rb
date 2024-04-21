@@ -16,7 +16,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_07_194758) do
 
   create_table "documents", force: :cascade do |t|
     t.integer "user_id"
-    t.string "title"
+    t.string "title", null: false
     t.string "document_type"
     t.text "content"
     t.string "status"
@@ -27,6 +27,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_07_194758) do
 
   create_table "transcriptions", force: :cascade do |t|
     t.integer "document_id"
+    t.string "title", null: false
     t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
