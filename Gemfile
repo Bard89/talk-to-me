@@ -79,6 +79,7 @@ gem "amazing_print", "~> 1.6", require: false
 # gem "rainbow", "~> 3.1", ">= 3.1.1" # TODO; use later to distinguish development and production environments
 
 group :development, :test do
+  gem 'rspec-rails', '~> 6.1', '>= 6.1.2'
   gem "annotate", "~> 3.2"
   # gem "bullet", "~> 7.0", ">= 7.0.1"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
