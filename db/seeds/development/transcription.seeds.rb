@@ -5,7 +5,8 @@ after 'development:users', 'development:documents' do
 
   Document.find_each do |document|
     seed Transcription,
-         document: document,
-         text: document.content
+         { title: "Transcription #{document.title}"},
+         { document: document,
+           text: document.content }
   end
 end

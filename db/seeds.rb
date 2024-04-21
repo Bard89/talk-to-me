@@ -8,7 +8,8 @@ def notify(filename)
   puts "Seeding #{file} from #{group} group"
 end
 
-def seed(model, attributes)
-  model.create!(attributes)
-  print '.'
+def seed(model, find_or_create_by, update_with)
+  model.find_or_create_by!(find_or_create_by) do |record|
+    record.update!(update_with)
+  end
 end
