@@ -1,6 +1,8 @@
-require 'rails_helper'
+# frozen_string_literal: true
 
-RSpec.describe "Homes", type: :request do
+require "rails_helper"
+
+RSpec.describe "Homes" do
   describe "GET /index" do
     it "returns http success" do
       get root_path
