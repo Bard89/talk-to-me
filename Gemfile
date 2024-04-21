@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.3.0"
+ruby "3.1.3"
 
 # Framework
 gem "pg", "~> 1.5", ">= 1.5.6"
@@ -12,37 +12,23 @@ gem "seedbank", "~> 0.5.0"
 # gem 'sentry-rails', '~> 5.17', '>= 5.17.1'
 # gem 'sentry-ruby', '~> 5.17', '>= 5.17.1'
 # gem 'sentry-sidekiq', '~> 5.17', '>= 5.17.1'
-
-# By default from project stsrt, TODO; clean later
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
-# Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 5.0"
-# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails"
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "stimulus-rails"
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
-# Use Redis adapter to run Action Cable in production
-gem "redis", "~> 4.0"
-# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem "kredis"
-
-# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
+gem "activerecord-import", "~> 1.6"
+gem "importmap-rails" # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
+gem "jbuilder" # Build JSON APIs with ease [https://github.com/rails/jbuilder]
+gem "jsonapi-serializer", "~> 2.2"
+gem "puma", "~> 5.0" # Use the Puma web server [https://github.com/puma/puma]
+gem "redis", "~> 4.0" # Use Redis adapter to run Action Cable in production
+gem "sassc", "~> 2.4"
+gem "sprockets-rails" # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
+gem "stimulus-rails" # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
+gem "tailwindcss-rails", "~> 2.4"
+gem "turbo-rails" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+# gem "kredis" # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "bcrypt", "~> 3.1.7"
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem "bootsnap", require: false # Reduces boot times through caching; required in config/boot.rb
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
-# Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
 
-# Use Sass to process CSS
-# gem "sassc-rails"
-
-# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
+# gem "sassc-rails" # Use Sass to process CSS
 # gem "image_processing", "~> 1.2"
 
 # Assets
@@ -58,21 +44,22 @@ gem "devise", "~> 4.9", ">= 4.9.3"
 
 # Authorization
 gem "cancancan", "~> 3.5"
+# gem 'pundit', '~> 2.3', '>= 2.3.1' # alternative to cancancan
 # gem 'pretender', '~> 0.5.0'
 
 # Eco system
 # gem 'sidekiq', '~> 7.2', '>= 7.2.2'
 
 # I18n
-# gem 'i18n', '~> 1.14', '>= 1.14.4'
-# gem 'devise-i18n', '~> 1.12'
+gem "devise-i18n", "~> 1.12"
+gem "i18n", "~> 1.14", ">= 1.14.4"
 
 # Controller Extensions
 #
 
 # Model Extensions
 gem "enumerize", "~> 2.8", ">= 2.8.1"
-# gem 'polymorphic_integer_type', '~> 3.2', '>= 3.2.2' # TODO; implement after it suports current rails
+# gem 'polymorphic_integer_type', '~> 3.2', '>= 3.2.2' # TODO; implement after it supports current rails
 # gem 'auto_strip_attributes', '~> 2.6'
 # gem 'counter_culture', '~> 3.5', '>= 3.5.3'
 # gem 'email_validator', '~> 2.2', '>= 2.2.4'
@@ -91,12 +78,13 @@ gem "simple_form", "~> 5.3"
 gem "amazing_print", "~> 1.6", require: false
 # gem "rainbow", "~> 3.1", ">= 3.1.1" # TODO; use later to distinguish development and production environments
 
-group :development, :test do
+group :development do
   gem "annotate", "~> 3.2"
+  gem "rspec-rails", "~> 6.1", ">= 6.1.2"
   # gem "bullet", "~> 7.0", ">= 7.0.1"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   # gem "capybara", "~> 3.40"
-  # gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "debug", platforms: %i[mri mingw x64_mingw]
   gem "factory_bot_rails", "~> 6.4", ">= 6.4.3"
   gem "ffaker", "~> 2.23"
   # gem "parallel", "~> 1.24"
@@ -111,6 +99,9 @@ group :development, :test do
   gem "pronto"
   gem "pronto-rubocop", require: false
 end
+
+# group :test do
+# end
 
 # group :production do
 # end

@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :documents do
     resource :transcription, only: [:show, :create, :update]
   end
-  root 'documents#index'
+  root 'home#index'
 end
 

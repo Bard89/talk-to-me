@@ -4,7 +4,8 @@ Vision -> Rails app that should serve as a replacement for Speechify. Reads text
 ## Instructions
 ### Run locally
 #### Setup
-TODO; Write local setup
+
+To run the server -> `bundle exec rails tailwindcss:watch` and `rails s`
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
