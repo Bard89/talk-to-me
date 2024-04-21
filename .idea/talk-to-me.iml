@@ -436,6 +436,14 @@
               </RakeTaskImpl>
             </subtasks>
           </RakeTaskImpl>
+          <RakeTaskImpl id="tailwindcss">
+            <subtasks>
+              <RakeTaskImpl description="Build your Tailwind CSS" fullCommand="tailwindcss:build" id="build" />
+              <RakeTaskImpl description="Remove CSS builds" fullCommand="tailwindcss:clobber" id="clobber" />
+              <RakeTaskImpl description="Install Tailwind CSS into the app" fullCommand="tailwindcss:install" id="install" />
+              <RakeTaskImpl description="Watch and build your Tailwind CSS on file changes" fullCommand="tailwindcss:watch" id="watch" />
+            </subtasks>
+          </RakeTaskImpl>
           <RakeTaskImpl id="time">
             <subtasks>
               <RakeTaskImpl description="List all time zones, list by two-letter country code (`bin/rails time:zones[US]`), or list by UTC offset (`bin/rails time:zones[-8]`)" fullCommand="time:zones[country_or_offset]" id="zones[country_or_offset]" />
