@@ -3,6 +3,7 @@
 
 Rails.application.routes.draw do
   devise_for :users
+  resources :users
   resources :documents do
     resource :transcription, only: [:show, :create, :update]
   end

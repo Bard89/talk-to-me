@@ -30,4 +30,15 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      user:
+        create:
+          success: "User was successfully created."
+          failure: "User could not be created."
+        update:
+          success: "User was successfully updated."
+          failure: "User could not be updated."
+        destroy:
+          success: "User was successfully destroyed."
+          failure: "User could not be destroyed."

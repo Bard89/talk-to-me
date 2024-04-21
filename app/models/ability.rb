@@ -8,7 +8,7 @@ class Ability
     #
     return if user.blank?
 
-    can :read, :all
+    can :read, User, id: user.id
     return unless user.sysadmin?
 
     can :manage, :all
