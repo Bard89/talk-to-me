@@ -16,12 +16,12 @@ gem "activerecord-import", "~> 1.6"
 gem "importmap-rails" # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "jbuilder" # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jsonapi-serializer", "~> 2.2"
-gem "puma", "~> 5.0" # Use the Puma web server [https://github.com/puma/puma]
-gem "redis", "~> 4.0" # Use Redis adapter to run Action Cable in production
+gem "puma", "~> 6.4" # Use the Puma web server [https://github.com/puma/puma]
+gem "redis", "~> 5.2" # Use Redis adapter to run Action Cable in production
 gem "sassc", "~> 2.4"
 gem "sprockets-rails" # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "stimulus-rails" # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "tailwindcss-rails", "~> 2.4"
+gem "tailwindcss-rails", "~> 2.6"
 gem "turbo-rails" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 # gem "kredis" # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "bcrypt", "~> 3.1.7"
@@ -40,7 +40,7 @@ gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 # gem 'grape-swagger-rails', '~> 0.4.0'
 
 # Authentication
-gem "devise", "~> 4.9", ">= 4.9.3"
+gem "devise", "~> 4.9"
 
 # Authorization
 gem "cancancan", "~> 3.5"
@@ -52,7 +52,7 @@ gem "cancancan", "~> 3.5"
 
 # I18n
 gem "devise-i18n", "~> 1.12"
-gem "i18n", "~> 1.14", ">= 1.14.4"
+gem "i18n", "~> 1.14"
 
 # Controller Extensions
 #
@@ -90,10 +90,10 @@ group :development do
   # gem "parallel", "~> 1.24"
   gem "execjs", "~> 2.9", ">= 2.9.1" # rewuired after adding the pre-commit
   gem "pre-commit", "~> 0.40.0", require: false
-  gem "rubocop", "~> 1.62", ">= 1.62.1", require: false
+  gem "rubocop", "~> 1.63", require: false
   gem "rubocop-performance", "~> 1.21"
   gem "rubocop-rails", "~> 2.24", ">= 2.24.1", require: false
-  gem "rubocop-rspec", "~> 2.28"
+  gem "rubocop-rspec", "~> 2.29"
   gem "web-console", "~> 4.2", ">= 4.2.1"
   # Review tools
   gem "pronto"
