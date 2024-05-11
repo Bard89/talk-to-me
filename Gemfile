@@ -52,7 +52,7 @@ gem "cancancan", "~> 3.5"
 
 # I18n
 gem "devise-i18n", "~> 1.12"
-gem "i18n", "~> 1.14", ">= 1.14.4"
+gem "i18n", "~> 1.14"
 
 # Controller Extensions
 #
