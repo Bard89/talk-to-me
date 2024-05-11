@@ -21,7 +21,7 @@ gem "redis", "~> 4.0" # Use Redis adapter to run Action Cable in production
 gem "sassc", "~> 2.4"
 gem "sprockets-rails" # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "stimulus-rails" # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "tailwindcss-rails", "~> 2.4"
+gem "tailwindcss-rails", "~> 2.6"
 gem "turbo-rails" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 # gem "kredis" # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "bcrypt", "~> 3.1.7"
