@@ -16,7 +16,7 @@ gem "activerecord-import", "~> 1.6"
 gem "importmap-rails" # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "jbuilder" # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jsonapi-serializer", "~> 2.2"
-gem "puma", "~> 5.0" # Use the Puma web server [https://github.com/puma/puma]
+gem "puma", "~> 6.4" # Use the Puma web server [https://github.com/puma/puma]
 gem "redis", "~> 4.0" # Use Redis adapter to run Action Cable in production
 gem "sassc", "~> 2.4"
 gem "sprockets-rails" # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
