@@ -96,6 +96,7 @@ group :development do
   gem "rubocop-rspec", "~> 2.29"
   gem "web-console", "~> 4.2", ">= 4.2.1"
   # Review tools
+  gem "faraday-retry", "~> 2.2", ">= 2.2.1"
   gem "pronto"
   gem "pronto-rubocop", require: false
   gem "suspenders", github: "thoughtbot/suspenders"
