@@ -40,7 +40,7 @@ gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 # gem 'grape-swagger-rails', '~> 0.4.0'
 
 # Authentication
-gem "devise", "~> 4.9", ">= 4.9.3"
+gem "devise", "~> 4.9"
 
 # Authorization
 gem "cancancan", "~> 3.5"
