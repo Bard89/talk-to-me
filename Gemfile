@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.3"
+ruby file: ".ruby-version"
 
 # Framework
 gem "pg", "~> 1.5", ">= 1.5.6"
