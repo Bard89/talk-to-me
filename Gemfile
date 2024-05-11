@@ -98,6 +98,7 @@ group :development do
   # Review tools
   gem "pronto"
   gem "pronto-rubocop", require: false
+  gem "suspenders", github: "thoughtbot/suspenders"
 end
 
 # group :test do
