@@ -90,7 +90,7 @@ group :development do
   # gem "parallel", "~> 1.24"
   gem "execjs", "~> 2.9", ">= 2.9.1" # rewuired after adding the pre-commit
   gem "pre-commit", "~> 0.40.0", require: false
-  gem "rubocop", "~> 1.62", ">= 1.62.1", require: false
+  gem "rubocop", "~> 1.63", require: false
   gem "rubocop-performance", "~> 1.21"
   gem "rubocop-rails", "~> 2.24", ">= 2.24.1", require: false
   gem "rubocop-rspec", "~> 2.28"
