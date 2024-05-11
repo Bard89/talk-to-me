@@ -93,7 +93,7 @@ group :development do
   gem "rubocop", "~> 1.62", ">= 1.62.1", require: false
   gem "rubocop-performance", "~> 1.21"
   gem "rubocop-rails", "~> 2.24", ">= 2.24.1", require: false
-  gem "rubocop-rspec", "~> 2.28"
+  gem "rubocop-rspec", "~> 2.29"
   gem "web-console", "~> 4.2", ">= 4.2.1"
   # Review tools
   gem "pronto"
