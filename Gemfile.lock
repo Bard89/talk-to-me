@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/thoughtbot/suspenders.git
+  revision: 17c374534982d62d7872ae4eaa4a4b799fc36e43
+  specs:
+    suspenders (3.0.0)
+      rails (~> 7.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -435,6 +442,7 @@ DEPENDENCIES
   simple_form (~> 5.3)
   sprockets-rails
   stimulus-rails
+  suspenders!
   tailwindcss-rails (~> 2.4)
   turbo-rails
   tzinfo-data
