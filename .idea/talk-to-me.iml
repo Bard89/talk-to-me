@@ -422,6 +422,13 @@
             </subtasks>
           </RakeTaskImpl>
           <RakeTaskImpl description="Run all specs in spec directory (excluding plugin specs)" fullCommand="spec" id="spec" />
+          <RakeTaskImpl id="spec">
+            <subtasks>
+              <RakeTaskImpl description="Run the code examples in spec/requests" fullCommand="spec:requests" id="requests" />
+              <RakeTaskImpl description="" fullCommand="spec:prepare" id="prepare" />
+              <RakeTaskImpl description="" fullCommand="spec:statsetup" id="statsetup" />
+            </subtasks>
+          </RakeTaskImpl>
           <RakeTaskImpl description="Report code statistics (KLOCs, etc) from the application or engine" fullCommand="stats" id="stats" />
           <RakeTaskImpl id="stimulus">
             <subtasks>
@@ -439,6 +446,22 @@
                   <RakeTaskImpl description="Update the Stimulus manifest (will overwrite controllers/index.js)" fullCommand="stimulus:manifest:update" id="update" />
                 </subtasks>
               </RakeTaskImpl>
+            </subtasks>
+          </RakeTaskImpl>
+          <RakeTaskImpl id="suspenders">
+            <subtasks>
+              <RakeTaskImpl id="cleanup">
+                <subtasks>
+                  <RakeTaskImpl description="Generate README" fullCommand="suspenders:cleanup:generate_readme" id="generate_readme" />
+                  <RakeTaskImpl description="Organizes Gemfile" fullCommand="suspenders:cleanup:organize_gemfile" id="organize_gemfile" />
+                </subtasks>
+              </RakeTaskImpl>
+              <RakeTaskImpl id="db">
+                <subtasks>
+                  <RakeTaskImpl description="Ensure a migration is reversible" fullCommand="suspenders:db:migrate" id="migrate" />
+                </subtasks>
+              </RakeTaskImpl>
+              <RakeTaskImpl description="Extend the default Rails Rake task" fullCommand="suspenders:rake" id="rake" />
             </subtasks>
           </RakeTaskImpl>
           <RakeTaskImpl id="tailwindcss">
@@ -525,12 +548,6 @@
                   <RakeTaskImpl description="" fullCommand="railties:install:migrations" id="migrations" />
                 </subtasks>
               </RakeTaskImpl>
-            </subtasks>
-          </RakeTaskImpl>
-          <RakeTaskImpl id="spec">
-            <subtasks>
-              <RakeTaskImpl description="" fullCommand="spec:prepare" id="prepare" />
-              <RakeTaskImpl description="" fullCommand="spec:statsetup" id="statsetup" />
             </subtasks>
           </RakeTaskImpl>
           <RakeTaskImpl description="" fullCommand="tmp" id="tmp" />
