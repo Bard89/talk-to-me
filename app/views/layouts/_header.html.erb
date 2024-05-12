@@ -158,8 +158,17 @@
   <div class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
     <!-- Sidebar component, swap this element with another sidebar if you like -->
     <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-600 px-6 pb-4">
+<!--      <div class="flex h-16 shrink-0 items-center">-->
+        <%#= link_to root_path do %>
+<!--          <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=white" alt="Talk To Me">-->
+        <%# end %>
+        <%#= link_to "TalkToMe", root_path, class: "text-white text-xl font-bold" %>
+<!--      </div>-->
       <div class="flex h-16 shrink-0 items-center">
-        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=white" alt="Your Company">
+        <%= link_to root_path, class: "flex items-center text-white text-xl font-bold" do %>
+          <%= image_tag 'favicon_cropped.png', class: 'h-8 w-auto mr-2', alt: 'Logo' %>
+          <span>TalkToMe</span>
+        <% end %>
       </div>
       <nav class="flex flex-1 flex-col">
         <ul role="list" class="flex flex-1 flex-col gap-y-7">
