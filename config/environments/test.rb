@@ -57,4 +57,11 @@ Rails.application.configure do
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
+
+  # Compress CSS using a preprocessor.
+  # config.assets.css_compressor = :sass
+
+  # disabled because of https://stackoverflow.com/questions/71805735/error-function-rgb-is-missing-argument-green-in-sass
+  # As SASS gem has not caught up with modern CSS syntax, this syntax throws an error.
+  config.assets.css_compressor = nil
 end
