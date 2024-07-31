@@ -6,8 +6,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby file: ".ruby-version"
 
 # Framework
-gem "pg", "~> 1.5", ">= 1.5.6"
-gem "rails", "~> 7.1", ">= 7.1.3.2"
+gem "pg", "~> 1.5", ">= 1.5.7"
+gem "rails", "~> 7.1", ">= 7.1.3.4"
 gem "seedbank", "~> 0.5.0"
 # gem 'sentry-rails', '~> 5.17', '>= 5.17.1'
 # gem 'sentry-ruby', '~> 5.17', '>= 5.17.1'
