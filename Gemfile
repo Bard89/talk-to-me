@@ -6,13 +6,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby file: ".ruby-version"
 
 # Framework
-gem "pg", "~> 1.5", ">= 1.5.6"
-gem "rails", "~> 7.1", ">= 7.1.3.2"
+gem "pg", "~> 1.5"
+gem "rails", "~> 7.1"
 gem "seedbank", "~> 0.5.0"
 # gem 'sentry-rails', '~> 5.17', '>= 5.17.1'
 # gem 'sentry-ruby', '~> 5.17', '>= 5.17.1'
 # gem 'sentry-sidekiq', '~> 5.17', '>= 5.17.1'
-gem "activerecord-import", "~> 1.6"
+gem "activerecord-import", "~> 1.7"
 gem "importmap-rails" # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "jbuilder" # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jsonapi-serializer", "~> 2.2"
@@ -47,7 +47,7 @@ gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "devise", "~> 4.9"
 
 # Authorization
-gem "cancancan", "~> 3.5"
+gem "cancancan", "~> 3.6"
 # gem 'pundit', '~> 2.3', '>= 2.3.1' # alternative to cancancan
 # gem 'pretender', '~> 0.5.0'
 
@@ -84,7 +84,7 @@ gem "amazing_print", "~> 1.6", require: false
 
 group :development do
   gem "annotate", "~> 3.2"
-  gem "rspec-rails", "~> 6.1", ">= 6.1.2"
+  gem "rspec-rails", "~> 6.1"
   # gem "bullet", "~> 7.0", ">= 7.0.1"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   # gem "capybara", "~> 3.40"
@@ -94,10 +94,10 @@ group :development do
   # gem "parallel", "~> 1.24"
   gem "execjs", "~> 2.9", ">= 2.9.1" # rewuired after adding the pre-commit
   gem "pre-commit", "~> 0.40.0", require: false
-  gem "rubocop", "~> 1.63", require: false
+  gem "rubocop", "~> 1.65", require: false
   gem "rubocop-performance", "~> 1.21"
-  gem "rubocop-rails", "~> 2.24", ">= 2.24.1", require: false
-  gem "rubocop-rspec", "~> 2.29"
+  gem "rubocop-rails", "~> 2.25", require: false
+  gem "rubocop-rspec", "~> 3.0"
   gem "web-console", "~> 4.2", ">= 4.2.1"
   # Review tools
   gem "faraday-retry", "~> 2.2", ">= 2.2.1"
