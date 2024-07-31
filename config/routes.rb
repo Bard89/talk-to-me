@@ -2,10 +2,12 @@
 #
 
 Rails.application.routes.draw do
-  devise_for :users
-  resources :documents do
-    resource :transcription, only: [:show, :create, :update]
-  end
   root 'home#index'
+  devise_for :users
+  scope '(:locale)' do
+    resources :documents do
+      resource :transcription, only: [:show, :create, :update]
+    end
+  end
 end
 
