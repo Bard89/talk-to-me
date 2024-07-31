@@ -12,7 +12,7 @@ gem "seedbank", "~> 0.5.0"
 # gem 'sentry-rails', '~> 5.17', '>= 5.17.1'
 # gem 'sentry-ruby', '~> 5.17', '>= 5.17.1'
 # gem 'sentry-sidekiq', '~> 5.17', '>= 5.17.1'
-gem "activerecord-import", "~> 1.6"
+gem "activerecord-import", "~> 1.7"
 gem "importmap-rails" # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "jbuilder" # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jsonapi-serializer", "~> 2.2"
@@ -25,7 +25,7 @@ gem "sassc", "~> 2.4" # TODO; after the gem catches with modern syntax in tailwi
 gem "sassc-rails", "~> 2.1", ">= 2.1.2"
 gem "sprockets-rails" # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "stimulus-rails" # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "tailwindcss-rails", "~> 2.6"
+gem "tailwindcss-rails", "~> 2.6", ">= 2.6.5"
 gem "turbo-rails" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 # gem "kredis" # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "bcrypt", "~> 3.1.7"
@@ -47,7 +47,7 @@ gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "devise", "~> 4.9"
 
 # Authorization
-gem "cancancan", "~> 3.5"
+gem "cancancan", "~> 3.6", ">= 3.6.1"
 # gem 'pundit', '~> 2.3', '>= 2.3.1' # alternative to cancancan
 # gem 'pretender', '~> 0.5.0'
 
@@ -55,7 +55,7 @@ gem "cancancan", "~> 3.5"
 # gem 'sidekiq', '~> 7.2', '>= 7.2.2'
 
 # I18n
-gem "devise-i18n", "~> 1.12"
+gem "devise-i18n", "~> 1.12", ">= 1.12.1"
 gem "i18n", "~> 1.14"
 
 # Controller Extensions
@@ -76,7 +76,7 @@ gem "enumerize", "~> 2.8", ">= 2.8.1"
 # gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
 
 # Forms Extensions
-gem "simple_form", "~> 5.3"
+gem "simple_form", "~> 5.3", ">= 5.3.1"
 
 # IRB
 gem "amazing_print", "~> 1.6", require: false
