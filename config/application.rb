@@ -37,5 +37,8 @@ module TalkToMe
     console do
       ARGV.push '-r', root.join('lib/console.rb')
     end
+
+    config.i18n.default_locale = :en
+    config.i18n.available_locales = [:en, :cs]
   end
 end
