@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/thoughtbot/suspenders.git
-  revision: 17c374534982d62d7872ae4eaa4a4b799fc36e43
+  revision: 2e1196f8e0f785a1906c6558446dfafb36c03fb7
   specs:
-    suspenders (3.0.0)
+    suspenders (20240516.0)
       rails (~> 7.0)
 
 GEM
@@ -204,7 +204,7 @@ GEM
       faraday (>= 1, < 3)
       sawyer (~> 0.9)
     orm_adapter (0.5.0)
-    parallel (1.24.0)
+    parallel (1.25.1)
     parser (3.3.1.0)
       ast (~> 2.4.1)
       racc
@@ -274,7 +274,7 @@ GEM
       redis-client (>= 0.22.0)
     redis-client (0.22.1)
       connection_pool
-    regexp_parser (2.9.1)
+    regexp_parser (2.9.2)
     reline (0.5.6)
       io-console (~> 0.5)
     responders (3.1.1)
@@ -298,13 +298,13 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.1)
-    rubocop (1.63.5)
+    rubocop (1.65.0)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
       parser (>= 3.3.0.2)
       rainbow (>= 2.2.2, < 4.0)
-      regexp_parser (>= 1.8, < 3.0)
+      regexp_parser (>= 2.4, < 3.0)
       rexml (>= 3.2.5, < 4.0)
       rubocop-ast (>= 1.31.1, < 2.0)
       ruby-progressbar (~> 1.7)
@@ -318,7 +318,7 @@ GEM
     rubocop-performance (1.21.0)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
-    rubocop-rails (2.24.1)
+    rubocop-rails (2.25.1)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
@@ -441,7 +441,7 @@ DEPENDENCIES
   simple_form (~> 5.3, >= 5.3.1)
   sprockets-rails
   stimulus-rails
-  suspenders!
+  suspenders (~> 20240516.0)!
   tailwindcss-rails (~> 2.6, >= 2.6.5)
   turbo-rails
   tzinfo-data

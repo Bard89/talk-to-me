@@ -94,7 +94,7 @@ group :development do
   # gem "parallel", "~> 1.24"
   gem "execjs", "~> 2.9", ">= 2.9.1" # rewuired after adding the pre-commit
   gem "pre-commit", "~> 0.40.0", require: false
-  gem "rubocop", "~> 1.63", require: false
+  gem 'rubocop', '~> 1.65', require: false
   gem "rubocop-performance", "~> 1.21"
   gem "rubocop-rails", "~> 2.24", ">= 2.24.1", require: false
   gem "rubocop-rspec", "~> 2.29"
@@ -103,7 +103,7 @@ group :development do
   gem "faraday-retry", "~> 2.2", ">= 2.2.1"
   gem "pronto"
   gem "pronto-rubocop", require: false
-  gem "suspenders", github: "thoughtbot/suspenders"
+  gem "suspenders", "~> 20240516.0", github: "thoughtbot/suspenders"
 end
 
 # group :test do
