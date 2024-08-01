@@ -2,3 +2,8 @@
 
   <%= form.button "Sign Out"%>
 <% end %>
+
+<%= form_with url: new_user_session_path, method: :get, local: false do |form| %>
+
+  <%= form.button "Sign in"%>
+<% end %>
