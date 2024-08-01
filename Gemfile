@@ -84,7 +84,7 @@ gem "amazing_print", "~> 1.6", require: false
 
 group :development do
   gem "annotate", "~> 3.2"
-  gem "rspec-rails", "~> 6.1", ">= 6.1.2"
+  gem "rspec-rails", "~> 6.1"
   # gem "bullet", "~> 7.0", ">= 7.0.1"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   # gem "capybara", "~> 3.40"
@@ -97,7 +97,7 @@ group :development do
   gem "rubocop", "~> 1.65", require: false
   gem "rubocop-performance", "~> 1.21", ">= 1.21.1"
   gem "rubocop-rails", "~> 2.25", ">= 2.25.1", require: false # update causing problems, leaving old version for now
-  gem "rubocop-rspec", "~> 2.29"
+  gem "rubocop-rspec", "~> 3.0"
   gem "web-console", "~> 4.2", ">= 4.2.1"
   # Review tools
   gem "faraday-retry", "~> 2.2", ">= 2.2.1"
