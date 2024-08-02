@@ -2,6 +2,7 @@
 
 class DocumentsController < ApplicationController
   before_action :authenticate_user!
+  before_action :find_document, only: [:show, :edit, :update, :destroy]
 
   def index
     @documents = current_user.documents
@@ -9,13 +10,43 @@ class DocumentsController < ApplicationController
 
   def show; end
 
-  def new; end
+  def new
+    @document = Document.new
+  end
 
   def edit; end
 
-  def create; end
+  def create
+    @document = Document.new(document_params)
+    @document.user = current_user
 
-  def update; end
+    if @document.save
+      redirect_to @document, notice: t("notice.created", item: "Document")
+    else
+      render :new, alert: t("notice.error")
+    end
+  end
 
-  def destroy; end
+  def update
+    if @document.update(document_params)
+      redirect_to @document, notice: t("notice.updated", item: "Document")
+    else
+      render :edit, alert: t("notice.error")
+    end
+  end
+
+  def destroy
+    @document.destroy
+    redirect_to documents_url, notice: t("flash_messages.success", item: "Document")
+  end
+
+  private
+
+  def document_params
+    params.require(:document).permit(:title, :document_type, :content, :status)
+  end
+
+  def find_document
+    @document = Document.find(params[:id])
+  end
 end

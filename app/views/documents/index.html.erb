@@ -1,14 +1,11 @@
-<h1>Documents#index</h1>
-<p>Find me in app/views/documents/index.html.erb</p>
-
-<h1>Your Documents xxxxxxxxxxxxxxxxxxxxxxxxxx <%= t('hello') %></h1>
-
 <% if @documents.any? %>
   <ul>
     <% @documents.each do |document| %>
-      <li><%= document.title %> - <%= document.content %></li>
+      <li><%= link_to document.title, document %></li>
     <% end %>
   </ul>
 <% else %>
   <p>You have no documents.</p>
 <% end %>
+
+<%= link_to 'New Document', new_document_path %>
