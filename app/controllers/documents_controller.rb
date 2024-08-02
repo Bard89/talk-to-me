@@ -2,7 +2,7 @@
 
 class DocumentsController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_document, only: [:show, :edit, :update, :destroy]
+  before_action :set_document, only: %i[show edit update destroy]
 
   def index
     @documents = current_user.documents
@@ -17,13 +17,12 @@ class DocumentsController < ApplicationController
   def edit; end
 
   def create
-    @document = Document.new(document_params)
-    @document.user = current_user
+    @document = current_user.documents.build(document_params)
 
     if @document.save
       redirect_to @document, notice: t("notice.created", item: "Document")
     else
-      render :new, alert: t("notice.error")
+      render :new, alert: t("notice.error"), status: :unprocessable_entity
     end
   end
 
@@ -31,7 +30,7 @@ class DocumentsController < ApplicationController
     if @document.update(document_params)
       redirect_to @document, notice: t("notice.updated", item: "Document")
     else
-      render :edit, alert: t("notice.error")
+      render :edit, alert: t("notice.error"), status: :unprocessable_entity
     end
   end
 
@@ -46,7 +45,7 @@ class DocumentsController < ApplicationController
     params.require(:document).permit(:title, :document_type, :content, :status)
   end
 
-  def find_document
-    @document = Document.find(params[:id])
+  def set_document
+    @document = current_user.documents.find(params[:id])
   end
 end
