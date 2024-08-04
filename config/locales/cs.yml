@@ -2,7 +2,7 @@
 cs:
   flash_messages:
     error: Chyba
-    success: Nový %{item} byl ůspěšně vytvořen.
+    success: Nový %{item} byl úspěšně vytvořen.
   hello: Ahoj světe
   notice:
     created: "%{item} byl úspěšně vytvořen."
