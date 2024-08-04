@@ -1,5 +1,3 @@
-<h1>Documents#show</h1>
-
 <div><%= @document.title %></div>
 <div><%= @document.content %></div>
 <div><%= @document.status %></div>
@@ -8,4 +6,4 @@
 
 <%= link_to 'Back', documents_path %>
 <%= link_to 'Edit', edit_document_path(@document) %>
-<%#= link_to 'Destroy', @document, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Destroy', @document, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
