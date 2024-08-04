@@ -25,14 +25,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_07_194758) do
     t.index ["user_id"], name: "index_documents_on_user_id"
   end
 
-  create_table "transcriptions", force: :cascade do |t|
-    t.integer "document_id"
-    t.string "title", null: false
-    t.text "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
