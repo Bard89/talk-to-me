@@ -1,2 +1,11 @@
+---
 cs:
-  hello: "Ahoj světe"
+  flash_messages:
+    error: Chyba
+    success: Nový %{item} byl úspěšně vytvořen.
+  hello: Ahoj světe
+  notice:
+    created: "%{item} byl úspěšně vytvořen."
+    destroyed: "%{item} byl úspěšně smazán."
+    error: Chyba
+    updated: "%{item} byl úspěšně aktualizován."

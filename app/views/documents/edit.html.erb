@@ -1,2 +1,21 @@
-<h1>Documents#edit</h1>
-<p>Find me in app/views/documents/edit.html.erb</p>
+<%= simple_form_for(@document) do |f| %>
+ <fieldset>
+   <div>
+     <%= f.label :title %>
+     <%= f.input :title, label: false %>
+   </div>
+   <div>
+     <%= f.label :content %>
+     <%= f.input :content, label: false %>
+   </div>
+   <div>
+     <%= f.label :status %>
+     <%= f.input :status, label: false %>
+   </div>
+   <div>
+     <%= f.button :submit %>
+   </div>
+ </fieldset>
+<% end %>
+
+<%= link_to 'Back', documents_path %>

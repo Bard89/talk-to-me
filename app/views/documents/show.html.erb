@@ -1,2 +1,9 @@
-<h1>Documents#show</h1>
-<p>Find me in app/views/documents/show.html.erb</p>
+<div><%= @document.title %></div>
+<div><%= @document.content %></div>
+<div><%= @document.status %></div>
+<div><%= @document.created_at %></div>
+<div><%= @document.updated_at %></div>
+
+<%= link_to 'Back', documents_path %>
+<%= link_to 'Edit', edit_document_path(@document) %>
+<%= link_to 'Destroy', @document, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
