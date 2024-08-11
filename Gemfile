@@ -84,15 +84,12 @@ gem "amazing_print", "~> 1.6", require: false
 
 group :development do
   gem "annotate", "~> 3.2"
-  gem "rspec-rails", "~> 6.1", ">= 6.1.2"
   # gem "bullet", "~> 7.0", ">= 7.0.1"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   # gem "capybara", "~> 3.40"
   gem "debug", platforms: %i[mri mingw x64_mingw]
-  gem "factory_bot_rails", "~> 6.4", ">= 6.4.3"
-  gem "ffaker", "~> 2.23"
   # gem "parallel", "~> 1.24"
-  gem "execjs", "~> 2.9", ">= 2.9.1" # rewuired after adding the pre-commit
+  gem "execjs", "~> 2.9", ">= 2.9.1" # required after adding the pre-commit
   gem "pre-commit", "~> 0.40.0", require: false
   gem "rubocop", "~> 1.65", require: false
   gem "rubocop-performance", "~> 1.21", ">= 1.21.1"
@@ -104,6 +101,12 @@ group :development do
   gem "pronto"
   gem "pronto-rubocop", require: false
   gem "suspenders", "~> 20240516.0", github: "thoughtbot/suspenders"
+end
+
+group :development, :test do
+  gem "factory_bot_rails", "~> 6.4", ">= 6.4.3"
+  gem "ffaker", "~> 2.23"
+  gem "rspec-rails", "~> 6.1", ">= 6.1.2"
 end
 
 group :test do
