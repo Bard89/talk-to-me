@@ -106,8 +106,9 @@ group :development do
   gem "suspenders", "~> 20240516.0", github: "thoughtbot/suspenders"
 end
 
-# group :test do
-# end
+group :test do
+  gem "rails-controller-testing"
+end
 
 # group :production do
 # end
