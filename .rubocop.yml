@@ -22,3 +22,9 @@ Style/Documentation:
 Layout/LineLength:
   Exclude:
     - 'initializers/**/*'
+RSpec/MultipleExpectations:
+  Max: 8
+RSpec/EmptyExampleGroup:
+  Enabled: false
+RSpec/NestedGroups:
+  Max: 4
