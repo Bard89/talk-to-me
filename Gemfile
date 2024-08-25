@@ -30,8 +30,9 @@ gem "turbo-rails" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.
 # gem "kredis" # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", require: false # Reduces boot times through caching; required in config/boot.rb
+gem "dotenv-rails", "~> 3.1", ">= 3.1.2"
+gem "ruby-openai", "~> 7.1"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
-
 # gem "sassc-rails" # Use Sass to process CSS
 # gem "image_processing", "~> 1.2"
 

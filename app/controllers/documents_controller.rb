@@ -39,6 +39,12 @@ class DocumentsController < ApplicationController
     redirect_to documents_url, notice: t("flash_messages.success", item: "Document")
   end
 
+  def text_to_speech
+    @document = current_user.documents.find(params[:id])
+    audio_content = TextToSpeechService.new(@document.content).convert
+    send_data audio_content, type: "audio/mpeg", filename: "#{@document.title}.mp3"
+  end
+
   private
 
   def document_params
