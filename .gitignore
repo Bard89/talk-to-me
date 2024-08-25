@@ -33,5 +33,5 @@
 /app/assets/builds/*
 !/app/assets/builds/.keep
 
-.byebug_history
+/.byebug_history
 /.idea
