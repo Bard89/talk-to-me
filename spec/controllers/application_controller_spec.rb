@@ -3,6 +3,12 @@
 require "rails_helper"
 
 RSpec.describe ApplicationController do
+  controller do
+    def index
+      render plain: "Hello, World!"
+    end
+  end
+
   describe "#set_locale" do
     it "sets the locale to the default when no locale param is present" do
       get :index
