@@ -10,14 +10,12 @@ class TextToSpeechService
   end
 
   def convert
-    response = @client.audio.speech(
+    @client.audio.speech(
       parameters: {
         model: "tts-1",
         input: @text,
         voice: "alloy"
       }
     )
-
-    response.body
   end
 end

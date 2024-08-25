@@ -1,9 +1,31 @@
-<div><%= @document.title %></div>
-<div><%= @document.content %></div>
-<div><%= @document.status %></div>
-<div><%= @document.created_at %></div>
-<div><%= @document.updated_at %></div>
+<h1><%= @document.title %></h1>
 
+<p>
+  <strong>Type:</strong>
+  <%= @document.document_type %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @document.status %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @document.content %>
+</p>
+
+<%= link_to 'Listen', @document.text_to_speech_url, target: '_blank', class: 'listen-button' %>
+<%= link_to 'Edit', edit_document_path(@document) %> |
 <%= link_to 'Back', documents_path %>
-<%= link_to 'Edit', edit_document_path(@document) %>
-<%= link_to 'Destroy', @document, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const listenButton = document.querySelector('.listen-button');
+    listenButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      const audio = new Audio(this.href);
+      audio.play();
+    });
+  });
+</script>

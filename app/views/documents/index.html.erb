@@ -1,7 +1,10 @@
 <% if @documents.any? %>
   <ul>
     <% @documents.each do |document| %>
-      <li><%= link_to document.title, document %></li>
+      <li>
+        <%= link_to document.title, document %>
+        <%= link_to 'Listen', document.text_to_speech_url, target: '_blank', class: 'listen-button' %>
+      </li>
     <% end %>
   </ul>
 <% else %>
