@@ -9,3 +9,10 @@ cs:
     destroyed: "%{item} byl úspěšně smazán."
     error: Chyba
     updated: "%{item} byl úspěšně aktualizován."
+    voice:
+      generate:
+        success: "Hlas byl úspěšně vygenerován."
+        error: "Hlas nebyl vygenerován."
+      delete:
+        success: "Hlas byl úspěšně smazán."
+        error: "Hlas nebyl smazán."

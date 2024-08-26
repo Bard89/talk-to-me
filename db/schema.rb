@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_07_194758) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_26_000120) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -38,4 +38,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_07_194758) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "voices", force: :cascade do |t|
+    t.bigint "document_id", null: false
+    t.binary "audio"
+    t.string "voice_type"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["document_id"], name: "index_voices_on_document_id"
+  end
+
+  add_foreign_key "voices", "documents"
 end

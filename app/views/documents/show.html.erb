@@ -15,17 +15,23 @@
   <%= @document.content %>
 </p>
 
-<%= link_to 'Listen', @document.text_to_speech_url, target: '_blank', class: 'listen-button' %>
+<h2>Voices</h2>
+<%= link_to 'View All Voices', document_voices_path(@document) %>
+
+<% if @document.voices.any? %>
+  <ul>
+    <% @document.voices.each do |voice| %>
+      <li>
+        <%= voice.voice_type %> - <%= voice.status %>
+        <%= audio_tag document_voice_path(@document, voice), controls: true %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No voices generated yet.</p>
+<% end %>
+
+<%= link_to 'Generate New Voice', document_voices_path(@document), method: :post, class: 'generate-button' %>
+
 <%= link_to 'Edit', edit_document_path(@document) %> |
 <%= link_to 'Back', documents_path %>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const listenButton = document.querySelector('.listen-button');
-    listenButton.addEventListener('click', function(event) {
-      event.preventDefault();
-      const audio = new Audio(this.href);
-      audio.play();
-    });
-  });
-</script>

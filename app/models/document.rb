@@ -24,6 +24,7 @@ class Document < ApplicationRecord
 
   # region Associations
   belongs_to :user
+  has_many :voices, dependent: :destroy
   # endregion
 
   # region Attribute macros

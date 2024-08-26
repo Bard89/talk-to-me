@@ -2,20 +2,28 @@
 
 require "openai"
 
-# class to convert text to speech
+# Service to convert text to speech
 class TextToSpeechService
-  def initialize(text)
-    @text = text
+  def initialize(document, voice_type = "alloy")
+    @document = document
+    @voice_type = voice_type
     @client = OpenAI::Client.new(access_token: ENV.fetch("OPENAI_API_KEY", nil))
   end
 
   def convert
-    @client.audio.speech(
+    response = @client.audio.speech(
       parameters: {
         model: "tts-1",
-        input: @text,
-        voice: "alloy"
+        input: @document.content,
+        voice: @voice_type
       }
+    )
+
+    Voice.create!(
+      document: @document,
+      audio: response,
+      voice_type: @voice_type,
+      status: "completed"
     )
   end
 end

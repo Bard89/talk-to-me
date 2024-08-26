@@ -3,7 +3,8 @@
     <% @documents.each do |document| %>
       <li>
         <%= link_to document.title, document %>
-        <%= link_to 'Listen', document.text_to_speech_url, target: '_blank', class: 'listen-button' %>
+        (<%= pluralize(document.voices.count, 'voice') %>)
+        <%= link_to 'Generate Voice', document_voices_path(document), method: :post, class: 'generate-button' %>
       </li>
     <% end %>
   </ul>
