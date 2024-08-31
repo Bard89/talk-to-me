@@ -8,6 +8,7 @@
         <%= audio_tag document_voice_path(@document, voice), controls: true %>
         <%= link_to 'Delete', document_voice_path(@document, voice), method: :delete, data: { confirm: 'Are you sure?' } %>
       </li>
+      <li><hr></li>
     <% end %>
   </ul>
 <% else %>
