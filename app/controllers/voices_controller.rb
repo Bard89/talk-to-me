@@ -2,14 +2,28 @@
 
 class VoicesController < ApplicationController
   before_action :set_document
-  before_action :set_voice, only: %i[show destroy]
+  before_action :set_voice, only: %i[show destroy download]
 
   def index
     @voices = @document.voices
   end
 
   def show
-    send_data @voice.audio, type: "audio/mpeg", filename: "#{@document.title}_#{@voice.voice_type}.mp3"
+    if @voice && @voice.audio.present?
+      send_data @voice.audio, type: "audio/mpeg", filename: "#{@document.title}_#{@voice.voice_type}.mp3",
+                              disposition: "inline"
+    else
+      redirect_to @document, alert: t("notice.voice.play.error")
+    end
+  end
+
+  def download
+    if @voice && @voice.audio.present?
+      send_data @voice.audio, type: "audio/mpeg", filename: "#{@document.title}_#{@voice.voice_type}.mp3",
+                              disposition: "attachment"
+    else
+      redirect_to @document, alert: t("notice.voice.download.error")
+    end
   end
 
   def create

@@ -24,6 +24,7 @@
       <li>
         <%= voice.voice_type %> - <%= voice.status %>
         <%= audio_tag document_voice_path(@document, voice), controls: true %>
+        <%= link_to 'Download', download_document_voice_path(@document, voice) %>
       </li>
     <% end %>
   </ul>

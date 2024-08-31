@@ -22,4 +22,6 @@
 #
 class Voice < ApplicationRecord
   belongs_to :document
+
+  validates :audio, presence: true
 end
