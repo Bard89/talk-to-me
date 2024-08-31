@@ -23,7 +23,7 @@ after 'development:users' do
   User.find_each.with_index do |user, i|
     5.times do |j|
       seed Document,
-           { title: "Document title #{i * 10 + j}" },
+           { title: "title en #{j}" },
            { document_type: %w[pdf text link].sample,
              content: lotr_quotes[:en][j],
              status: Document::STATUS[j % 4],
@@ -32,7 +32,7 @@ after 'development:users' do
 
     5.times do |j|
       seed Document,
-           { title: "Document title #{i * 100 + j}" },
+           { title: "title cs #{j + 5}" },
            { document_type: %w[pdf text link].sample,
              content: lotr_quotes[:cs][j],
              status: Document::STATUS[j % 4],
