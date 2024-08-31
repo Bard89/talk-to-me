@@ -4,7 +4,7 @@ after 'development:documents' do
   notify __FILE__
 
   Document.find_each.with_index do |document, index|
-    voice_file_path = Rails.root.join("app", "files", "#{index}_alloy.mp3")
+    voice_file_path = Rails.root.join("app", "files", "generated_voices", "#{index}_alloy.mp3")
     voice_attributes = {
       document_id: document.id,
       voice_type: "ai_generated",
