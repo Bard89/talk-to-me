@@ -9,5 +9,6 @@ seed User,
 5.times do |index|
   seed User,
        { email: "user#{index}@talktome.com"},
-       { password: '12345678' }
+       { password: '12345678',
+         role: 'normie' }
 end
