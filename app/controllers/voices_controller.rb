@@ -13,8 +13,12 @@ class VoicesController < ApplicationController
   end
 
   def create
-    TextToSpeechService.new(@document).convert
-    redirect_to @document, notice: t("notice.voice.generate.success")
+    voice = TextToSpeechService.new(@document).convert
+    if voice.persisted?
+      redirect_to @document, notice: t("notice.voice.generate.success")
+    else
+      redirect_to @document, alert: t("notice.voice.generate.error")
+    end
   end
 
   def destroy

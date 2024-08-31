@@ -31,7 +31,7 @@
   <p>No voices generated yet.</p>
 <% end %>
 
-<%= link_to 'Generate New Voice', document_voices_path(@document), method: :post, class: 'generate-button' %>
+<%= button_to 'Generate New Voice', document_voices_path(@document), method: :post, data: { turbo: false } %>
 
 <%= link_to 'Edit', edit_document_path(@document) %> |
 <%= link_to 'Back', documents_path %>

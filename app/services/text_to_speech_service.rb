@@ -25,5 +25,12 @@ class TextToSpeechService
       voice_type: @voice_type,
       status: "completed"
     )
+  rescue StandardError => e
+    Rails.logger.error "Error in TextToSpeechService: #{e.message}"
+    Voice.create(
+      document: @document,
+      voice_type: @voice_type,
+      status: "failed"
+    )
   end
 end
