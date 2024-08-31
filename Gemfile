@@ -106,7 +106,7 @@ end
 
 group :development, :test do
   gem "factory_bot_rails", "~> 6.4", ">= 6.4.3"
-  gem "ffaker", "~> 2.23"
+  gem "faker", "~> 3.4", ">= 3.4.2"
   gem "rspec-rails", "~> 6.1", ">= 6.1.2"
 end
 

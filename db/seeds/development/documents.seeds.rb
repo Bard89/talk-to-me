@@ -8,7 +8,7 @@ after 'development:users' do
       seed Document,
            { title: "Document title #{i * 10 + j}" },
            { document_type: %w[pdf text link].sample,
-             content: FFaker::Lorem.paragraph,
+             content: Faker::Lorem.paragraph,
              status: Document::STATUS.sample,
              user: user }
     end
