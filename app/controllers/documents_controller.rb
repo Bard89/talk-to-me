@@ -5,7 +5,7 @@ class DocumentsController < ApplicationController
   before_action :set_document, only: %i[show edit update destroy]
 
   def index
-    @documents = current_user.documents.order(created_at: :desc)
+    @documents = current_user.documents.includes(:voices).order(created_at: :desc)
   end
 
   def show; end
