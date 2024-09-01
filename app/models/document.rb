@@ -5,13 +5,17 @@
 # Table name: documents
 #
 #  id            :bigint           not null, primary key
-#  user_id       :integer
-#  title         :string
-#  document_type :string
 #  content       :text
+#  document_type :string
 #  status        :string
+#  title         :string           not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  user_id       :integer
+#
+# Indexes
+#
+#  index_documents_on_user_id  (user_id)
 #
 class Document < ApplicationRecord
   # region Constants
@@ -24,6 +28,7 @@ class Document < ApplicationRecord
 
   # region Associations
   belongs_to :user
+  has_many :voices, dependent: :destroy
   # endregion
 
   # region Attribute macros

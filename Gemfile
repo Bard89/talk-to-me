@@ -30,8 +30,9 @@ gem "turbo-rails" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.
 # gem "kredis" # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", require: false # Reduces boot times through caching; required in config/boot.rb
+gem "dotenv-rails", "~> 3.1", ">= 3.1.2"
+gem "ruby-openai", "~> 7.1"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
-
 # gem "sassc-rails" # Use Sass to process CSS
 # gem "image_processing", "~> 1.2"
 
@@ -84,7 +85,7 @@ gem "amazing_print", "~> 1.6", require: false
 
 group :development do
   gem "annotate", "~> 3.2"
-  # gem "bullet", "~> 7.0", ">= 7.0.1"
+  gem "bullet", "~> 7.2"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   # gem "capybara", "~> 3.40"
   gem "debug", platforms: %i[mri mingw x64_mingw]
@@ -98,14 +99,14 @@ group :development do
   gem "web-console", "~> 4.2", ">= 4.2.1"
   # Review tools
   gem "faraday-retry", "~> 2.2", ">= 2.2.1"
-  gem "pronto"
+  gem "pronto", "~> 0.11.2"
   gem "pronto-rubocop", require: false
   gem "suspenders", "~> 20240516.0", github: "thoughtbot/suspenders"
 end
 
 group :development, :test do
   gem "factory_bot_rails", "~> 6.4", ">= 6.4.3"
-  gem "ffaker", "~> 2.23"
+  gem "faker", "~> 3.4", ">= 3.4.2"
   gem "rspec-rails", "~> 6.1", ">= 6.1.2"
 end
 

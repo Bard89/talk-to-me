@@ -5,7 +5,7 @@ class DocumentsController < ApplicationController
   before_action :set_document, only: %i[show edit update destroy]
 
   def index
-    @documents = current_user.documents.order(created_at: :desc)
+    @documents = current_user.documents.includes(:voices).order(created_at: :desc)
   end
 
   def show; end
@@ -37,6 +37,12 @@ class DocumentsController < ApplicationController
   def destroy
     @document.destroy
     redirect_to documents_url, notice: t("flash_messages.success", item: "Document")
+  end
+
+  def text_to_speech
+    @document = current_user.documents.find(params[:id])
+    audio_content = TextToSpeechService.new(@document.content).convert
+    send_data audio_content, type: "audio/mpeg", filename: "#{@document.title}.mp3"
   end
 
   private
