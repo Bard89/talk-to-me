@@ -85,7 +85,7 @@ gem "amazing_print", "~> 1.6", require: false
 
 group :development do
   gem "annotate", "~> 3.2"
-  # gem "bullet", "~> 7.0", ">= 7.0.1"
+  gem "bullet", "~> 7.2"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   # gem "capybara", "~> 3.40"
   gem "debug", platforms: %i[mri mingw x64_mingw]
