@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-after 'development:documents' do
+after "development:documents" do
   notify __FILE__
 
   Document.find_each.with_index do |document, index|
@@ -12,7 +12,7 @@ after 'development:documents' do
     }
 
     unless File.exist?(voice_file_path)
-      puts "Warning: Voice file not found for document #{index}. Skipping."
+      puts "Voice file not found for document #{index}. Skipping."
       next
     end
 
