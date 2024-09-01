@@ -5,7 +5,7 @@
 # Table name: voices
 #
 #  id          :bigint           not null, primary key
-#  audio       :binary
+#  audio       :binary           not null
 #  status      :string
 #  voice_type  :string
 #  created_at  :datetime         not null
@@ -21,7 +21,25 @@
 #  fk_rails_...  (document_id => documents.id)
 #
 class Voice < ApplicationRecord
-  belongs_to :document
+  # region Constants
+  # endregion
 
-  validates :audio, presence: true
+  # region Extensions
+  # endregion
+
+  # region Associations
+  belongs_to :document
+  # endregion
+
+  # region Attribute macros
+  # endregion
+
+  # region Scopes
+  # endregion
+
+  # region Validations
+  # endregion
+
+  # region Callback
+  # endregion
 end

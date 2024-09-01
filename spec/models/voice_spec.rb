@@ -5,7 +5,7 @@
 # Table name: voices
 #
 #  id          :bigint           not null, primary key
-#  audio       :binary
+#  audio       :binary           not null
 #  status      :string
 #  voice_type  :string
 #  created_at  :datetime         not null

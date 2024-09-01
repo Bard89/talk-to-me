@@ -40,7 +40,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_26_000120) do
 
   create_table "voices", force: :cascade do |t|
     t.bigint "document_id", null: false
-    t.binary "audio"
+    t.binary "audio", null: false
     t.string "voice_type"
     t.string "status"
     t.datetime "created_at", null: false
