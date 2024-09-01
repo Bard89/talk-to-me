@@ -20,7 +20,7 @@ after 'development:users' do
     ]
   }
 
-  User.find_each.with_index do |user, i|
+  User.find_each do |user|
     5.times do |j|
       seed Document,
            { title: "title en #{j}" },
