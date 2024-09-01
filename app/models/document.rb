@@ -43,8 +43,4 @@ class Document < ApplicationRecord
 
   # region Callback
   # endregion
-
-  def text_to_speech_url
-    Rails.application.routes.url_helpers.text_to_speech_document_path(self)
-  end
 end
