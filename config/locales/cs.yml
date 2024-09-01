@@ -16,3 +16,6 @@ cs:
       delete:
         success: "Hlas byl úspěšně smazán."
         error: "Hlas nebyl smazán."
+  alert:
+    voice:
+      error: "Soubor nenalezen."

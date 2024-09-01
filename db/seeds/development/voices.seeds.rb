@@ -16,8 +16,7 @@ after 'development:documents' do
       next
     end
 
-    voice_attributes[:audio] = File.open(voice_file_path)
-
+    voice_attributes[:audio] = File.binread(voice_file_path)
     seed Voice, { document_id: document.id }, voice_attributes
   end
 end

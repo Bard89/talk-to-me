@@ -23,7 +23,7 @@
     <% @document.voices.each do |voice| %>
       <li>
         <%= voice.voice_type %> - <%= voice.status %>
-        <%= audio_tag document_voice_path(@document, voice), controls: true %>
+        <%= audio_tag play_document_voice_path(@document, voice), controls: true %>
         <%= link_to 'Download', download_document_voice_path(@document, voice) %>
       </li>
     <% end %>

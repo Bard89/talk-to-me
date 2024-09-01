@@ -7,7 +7,7 @@
         <% if document.voices.any? %>
           <% latest_voice = document.voices.last %>
           <%= latest_voice.voice_type %> - <%= latest_voice.status %>
-          <%= audio_tag document_voice_path(document, latest_voice), controls: true %>
+          <%= audio_tag play_document_voice_path(document, latest_voice), controls: true %>
           <%= link_to 'Download', download_document_voice_path(document, latest_voice) %>
         <% end %>
         <%= button_to 'Generate Voice', document_voices_path(document), method: :post, data: { turbo: false } %>

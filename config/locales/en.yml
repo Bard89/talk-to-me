@@ -16,3 +16,6 @@ en:
       delete:
         success: "Voice was successfully deleted."
         error: "Voice was not deleted."
+  alert:
+    voice:
+      error: "File not found."

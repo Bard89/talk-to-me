@@ -99,7 +99,7 @@ group :development do
   gem "web-console", "~> 4.2", ">= 4.2.1"
   # Review tools
   gem "faraday-retry", "~> 2.2", ">= 2.2.1"
-  gem "pronto"
+  gem "pronto", "~> 0.11.2"
   gem "pronto-rubocop", require: false
   gem "suspenders", "~> 20240516.0", github: "thoughtbot/suspenders"
 end

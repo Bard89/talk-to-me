@@ -443,7 +443,7 @@ DEPENDENCIES
   jsonapi-serializer (~> 2.2)
   pg (~> 1.5, >= 1.5.7)
   pre-commit (~> 0.40.0)
-  pronto
+  pronto (~> 0.11.2)
   pronto-rubocop
   puma (~> 6.4)
   rails (~> 7.1, >= 7.1.3.4)
