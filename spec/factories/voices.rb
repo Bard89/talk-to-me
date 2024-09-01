@@ -22,9 +22,9 @@
 #
 FactoryBot.define do
   factory :voice do
-    document { nil }
-    audio { "" }
-    voice_type { "MyString" }
-    status { "MyString" }
+    document
+    audio { Rails.root.join("app", "files", "generated_voices", "#{index}_alloy.mp3").read }
+    voice_type { "alloy" }
+    status { "completed" }
   end
 end
