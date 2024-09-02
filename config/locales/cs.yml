@@ -1,52 +1,52 @@
 ---
 cs:
+  alert:
+    voice:
+      error: Soubor nenalezen.
+  enumerize:
+    document:
+      few: Dokumenty
+      one: Dokument
+      other: Dokumenty
+    user:
+      few: Uživatelé
+      one: Uživatel
+      other: Uživatelé
+    voice:
+      few: Hlasy
+      one: Hlas
+      other: Hlasy
   flash_messages:
     error: Chyba
     success: Nový %{item} byl úspěšně vytvořen.
   hello: Ahoj světe
-  welcome: Vítejte v TalkToMe!
+  links:
+    back: Zpět
+    create: Vytvořit %{item}
+    download: Stáhnout %{item}
+    edit: Upravit %{item}
+    generate: Vygenerovat %{item}
+    generate_new: Vygenerovat nový %{item}
+    home: Domů
+    new: Nový %{item}
+    update: Aktualizovat %{item}
+  models:
+    document:
+      content: Obsah
+      status: Stav
+      title: Název
+      type: Typ
   notice:
     created: "%{item} byl úspěšně vytvořen."
     destroyed: "%{item} byl úspěšně smazán."
     error: Chyba
     updated: "%{item} byl úspěšně aktualizován."
     voice:
-      generate:
-        success: "Hlas byl úspěšně vygenerován."
-        error: "Hlas nebyl vygenerován."
       delete:
-        success: "Hlas byl úspěšně smazán."
-        error: "Hlas nebyl smazán."
-  alert:
-    voice:
-      error: "Soubor nenalezen."
-  links:
-    back: "Zpět"
-    new: "Nový %{item}"
-    home: "Domů"
-    download: "Stáhnout %{item}"
-    generate: "Vygenerovat %{item}"
-    generate_new: "Vygenerovat nový %{item}"
-    edit: "Upravit %{item}"
-    create: "Vytvořit %{item}"
-    update: "Aktualizovat %{item}"
-  enumerize:
-    voice:
-      one: Hlas
-      few: Hlasy
-      other: Hlasy
-    document:
-      one: Dokument
-      few: Dokumenty
-      other: Dokumenty
-    user:
-      one: Uživatel
-      few: Uživatelé
-      other: Uživatelé
+        error: Hlas nebyl smazán.
+        success: Hlas byl úspěšně smazán.
+      generate:
+        error: Hlas nebyl vygenerován.
+        success: Hlas byl úspěšně vygenerován.
   voice: hlas
-  models:
-    document:
-      type: Typ
-      status: Stav
-      content: Obsah
-      title: Název
+  welcome: Vítejte v TalkToMe!
