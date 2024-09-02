@@ -16,8 +16,6 @@
 </p>
 
 <h2>Voices</h2>
-<%= link_to 'View All Voices', document_voices_path(@document) %>
-
 <% if @document.voices.any? %>
   <ul>
     <% @document.voices.each do |voice| %>
