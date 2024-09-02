@@ -27,6 +27,7 @@ cs:
     generate: "Vygenerovat %{item}"
     generate_new: "Vygenerovat nový %{item}"
     edit: "Upravit"
+    create: "Vytvořit %{item}"
   enumerize:
     voice:
       one: Hlas
@@ -42,3 +43,4 @@ cs:
       type: Typ
       status: Stav
       content: Obsah
+      title: Název
