@@ -1,17 +1,17 @@
 <%= simple_form_for(@document) do |f| %>
  <fieldset>
    <div>
-     <%= f.label :title %>
+     <%= f.label :title, t('models.document.title') %>
      <%= f.input :title, label: false %>
    </div>
    <div>
-     <%= f.label :content %>
+     <%= f.label :content, t('models.document.content') %>
      <%= f.input :content, label: false %>
    </div>
    <div>
-     <%= f.button :submit %>
+     <%= f.button :submit, t('links.update', item: t('enumerize.document.one')) %>
    </div>
  </fieldset>
 <% end %>
 
-<%= link_to 'Back', documents_path %>
+<%= link_to t('links.back'), documents_path %>

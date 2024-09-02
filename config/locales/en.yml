@@ -1,21 +1,52 @@
 ---
 en:
+  alert:
+    voice:
+      error: File not found.
+  enumerize:
+    document:
+      few: Documents
+      one: Document
+      other: Documents
+    user:
+      few: Users
+      one: User
+      other: Users
+    voice:
+      few: Voices
+      one: Voice
+      other: Voices
   flash_messages:
     error: Error
     success: Success
   hello: Hello world
+  links:
+    back: Back
+    create: Create %{item}
+    download: Download %{item}
+    edit: Edit %{item}
+    generate: Generate %{item}
+    generate_new: Generate new %{item}
+    home: Home
+    new: New %{item}
+    update: Update %{item}
+  models:
+    document:
+      content: Content
+      status: Status
+      title: Title
+      type: Type
   notice:
     created: "%{item} was successfully created."
     destroyed: "%{item} was successfully destroyed."
     error: Error
     updated: "%{item} was successfully updated."
     voice:
-      generate:
-        success: "Voice was successfully generated."
-        error: "Voice was not generated."
       delete:
-        success: "Voice was successfully deleted."
-        error: "Voice was not deleted."
-  alert:
-    voice:
-      error: "File not found."
+        error: Voice was not deleted.
+        success: Voice was successfully deleted.
+      generate:
+        error: Voice was not generated.
+        success: Voice was successfully generated.
+  voice: voice
+  welcome: Welcome to TalkToMe!
