@@ -4,6 +4,7 @@ en:
     error: Error
     success: Success
   hello: Hello world
+  welcome: Welcome to TalkToMe!
   notice:
     created: "%{item} was successfully created."
     destroyed: "%{item} was successfully destroyed."
@@ -26,7 +27,7 @@ en:
     download: "Download %{item}"
     generate: "Generate %{item}"
     generate_new: "Generate new %{item}"
-    edit: "Edit"
+    edit: "Edit %{item}"
     create: "Create %{item}"
     update: "Update %{item}"
   enumerize:
@@ -38,6 +39,10 @@ en:
       one: Document
       few: Documents
       other: Documents
+    user:
+      one: User
+      few: Users
+      other: Users
   voice: voice
   models:
     document:

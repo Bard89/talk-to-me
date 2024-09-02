@@ -4,6 +4,7 @@ cs:
     error: Chyba
     success: Nový %{item} byl úspěšně vytvořen.
   hello: Ahoj světe
+  welcome: Vítejte v TalkToMe!
   notice:
     created: "%{item} byl úspěšně vytvořen."
     destroyed: "%{item} byl úspěšně smazán."
@@ -26,7 +27,7 @@ cs:
     download: "Stáhnout %{item}"
     generate: "Vygenerovat %{item}"
     generate_new: "Vygenerovat nový %{item}"
-    edit: "Upravit"
+    edit: "Upravit %{item}"
     create: "Vytvořit %{item}"
     update: "Aktualizovat %{item}"
   enumerize:
@@ -38,6 +39,10 @@ cs:
       one: Dokument
       few: Dokumenty
       other: Dokumenty
+    user:
+      one: Uživatel
+      few: Uživatelé
+      other: Uživatelé
   voice: hlas
   models:
     document:

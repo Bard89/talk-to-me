@@ -29,5 +29,5 @@
 
 <%= button_to t('links.generate_new', item: t('voice')), document_voices_path(@document), method: :post, data: { turbo: false } %>
 
-<%= link_to t('links.edit'), edit_document_path(@document) %> |
+<%= link_to t('links.edit', item: t('enumerize.document.one')), edit_document_path(@document) %> |
 <%= link_to t('links.back'), documents_path %>
