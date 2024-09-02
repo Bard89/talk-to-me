@@ -451,7 +451,7 @@ DEPENDENCIES
   rails (~> 7.2)
   rails-controller-testing
   redis (~> 5.3)
-  rspec-rails (~> 6.1, >= 6.1.2)
+  rspec-rails (~> 6.1)
   rubocop (~> 1.66)
   rubocop-performance (~> 1.21, >= 1.21.1)
   rubocop-rails (~> 2.25, >= 2.25.1)

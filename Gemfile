@@ -95,7 +95,7 @@ group :development do
   gem "rubocop", "~> 1.66", require: false
   gem "rubocop-performance", "~> 1.21", ">= 1.21.1"
   gem "rubocop-rails", "~> 2.25", ">= 2.25.1", require: false # update causing problems, leaving old version for now
-  gem "rubocop-rspec", "~> 2.29"
+  gem "rubocop-rspec", "~> 2.29" # update causing problems, leaving old version for now
   gem "web-console", "~> 4.2", ">= 4.2.1"
   # Review tools
   gem "faraday-retry", "~> 2.2", ">= 2.2.1"
@@ -107,7 +107,7 @@ end
 group :development, :test do
   gem "factory_bot_rails", "~> 6.4", ">= 6.4.3"
   gem "faker", "~> 3.4", ">= 3.4.2"
-  gem "rspec-rails", "~> 6.1", ">= 6.1.2"
+  gem "rspec-rails", "~> 6.1"
 end
 
 group :test do
