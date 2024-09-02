@@ -7,17 +7,17 @@ ruby file: ".ruby-version"
 
 # Framework
 gem "pg", "~> 1.5", ">= 1.5.7"
-gem "rails", "~> 7.1", ">= 7.1.3.4"
+gem "rails", "~> 7.2"
 gem "seedbank", "~> 0.5.0"
 # gem 'sentry-rails', '~> 5.17', '>= 5.17.1'
 # gem 'sentry-ruby', '~> 5.17', '>= 5.17.1'
 # gem 'sentry-sidekiq', '~> 5.17', '>= 5.17.1'
-gem "activerecord-import", "~> 1.7"
+gem "activerecord-import", "~> 1.8"
 gem "importmap-rails" # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "jbuilder" # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jsonapi-serializer", "~> 2.2"
 gem "puma", "~> 6.4" # Use the Puma web server [https://github.com/puma/puma]
-gem "redis", "~> 5.2" # Use Redis adapter to run Action Cable in production
+gem "redis", "~> 5.3" # Use Redis adapter to run Action Cable in production
 
 gem "sassc", "~> 2.4" # TODO; after the gem catches with modern syntax in tailwind remove the disabling of
 # css_compressor in test and production environments
@@ -25,7 +25,7 @@ gem "sassc", "~> 2.4" # TODO; after the gem catches with modern syntax in tailwi
 gem "sassc-rails", "~> 2.1", ">= 2.1.2"
 gem "sprockets-rails" # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "stimulus-rails" # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "tailwindcss-rails", "~> 2.6", ">= 2.6.5"
+gem "tailwindcss-rails", "~> 2.7"
 gem "turbo-rails" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 # gem "kredis" # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "bcrypt", "~> 3.1.7"
