@@ -28,6 +28,7 @@ en:
     generate_new: "Generate new %{item}"
     edit: "Edit"
     create: "Create %{item}"
+    update: "Update %{item}"
   enumerize:
     voice:
       one: Voice

@@ -28,6 +28,7 @@ cs:
     generate_new: "Vygenerovat nový %{item}"
     edit: "Upravit"
     create: "Vytvořit %{item}"
+    update: "Aktualizovat %{item}"
   enumerize:
     voice:
       one: Hlas
