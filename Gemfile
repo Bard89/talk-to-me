@@ -92,7 +92,7 @@ group :development do
   # gem "parallel", "~> 1.24"
   gem "execjs", "~> 2.9", ">= 2.9.1" # required after adding the pre-commit
   gem "pre-commit", "~> 0.40.0", require: false
-  gem "rubocop", "~> 1.65", require: false
+  gem "rubocop", "~> 1.66", require: false
   gem "rubocop-performance", "~> 1.21", ">= 1.21.1"
   gem "rubocop-rails", "~> 2.25", ">= 2.25.1", require: false # update causing problems, leaving old version for now
   gem "rubocop-rspec", "~> 2.29"
