@@ -35,6 +35,7 @@
 
 /.byebug_history
 /.idea
+/.idea.*
 
 # Ignore environment variables file
 .env

@@ -19,3 +19,26 @@ cs:
   alert:
     voice:
       error: "Soubor nenalezen."
+  links:
+    back: "Zpět"
+    new: "Nový %{item}"
+    home: "Domů"
+    download: "Stáhnout %{item}"
+    generate: "Vygenerovat %{item}"
+    generate_new: "Vygenerovat nový %{item}"
+    edit: "Upravit"
+  enumerize:
+    voice:
+      one: Hlas
+      few: Hlasy
+      other: Hlasy
+    document:
+      one: Dokument
+      few: Dokumenty
+      other: Dokumenty
+  voice: hlas
+  models:
+    document:
+      type: Typ
+      status: Stav
+      content: Obsah

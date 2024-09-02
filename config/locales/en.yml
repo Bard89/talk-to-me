@@ -19,3 +19,26 @@ en:
   alert:
     voice:
       error: "File not found."
+  links:
+    back: "Back"
+    new: "New %{item}"
+    home: "Home"
+    download: "Download %{item}"
+    generate: "Generate %{item}"
+    generate_new: "Generate new %{item}"
+    edit: "Edit"
+  enumerize:
+    voice:
+      one: Voice
+      few: Voices
+      other: Voices
+    document:
+      one: Document
+      few: Documents
+      other: Documents
+  voice: voice
+  models:
+    document:
+      type: Type
+      status: Status
+      content: Content
