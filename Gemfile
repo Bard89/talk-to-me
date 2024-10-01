@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby file: ".ruby-version"
 
 # Framework
-gem "pg", "~> 1.5", ">= 1.5.7"
+gem "pg", "~> 1.5"
 gem "rails", "~> 7.2"
 gem "seedbank", "~> 0.5.0"
 # gem 'sentry-rails', '~> 5.17', '>= 5.17.1'
@@ -30,7 +30,7 @@ gem "turbo-rails" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.
 # gem "kredis" # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", require: false # Reduces boot times through caching; required in config/boot.rb
-gem "dotenv-rails", "~> 3.1", ">= 3.1.2"
+gem "dotenv-rails", "~> 3.1"
 gem "ruby-openai", "~> 7.1"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 # gem "sassc-rails" # Use Sass to process CSS
@@ -93,9 +93,9 @@ group :development do
   gem "execjs", "~> 2.9", ">= 2.9.1" # required after adding the pre-commit
   gem "pre-commit", "~> 0.40.0", require: false
   gem "rubocop", "~> 1.66", require: false
-  gem "rubocop-performance", "~> 1.21", ">= 1.21.1"
-  gem "rubocop-rails", "~> 2.25", ">= 2.25.1", require: false # update causing problems, leaving old version for now
-  gem "rubocop-rspec", "~> 2.29" # update causing problems, leaving old version for now
+  gem "rubocop-performance", "~> 1.22"
+  gem "rubocop-rails", "~> 2.26", require: false # update causing problems, leaving old version for now
+  gem "rubocop-rspec", "~> 3.0" # update causing problems, leaving old version for now
   gem "web-console", "~> 4.2", ">= 4.2.1"
   # Review tools
   gem "faraday-retry", "~> 2.2", ">= 2.2.1"
@@ -107,7 +107,7 @@ end
 group :development, :test do
   gem "factory_bot_rails", "~> 6.4", ">= 6.4.3"
   gem "faker", "~> 3.4", ">= 3.4.2"
-  gem "rspec-rails", "~> 6.1"
+  gem "rspec-rails", "~> 7.0"
 end
 
 group :test do
