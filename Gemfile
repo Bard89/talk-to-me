@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby file: ".ruby-version"
 
 # Framework
-gem "pg", "~> 1.5", ">= 1.5.7"
+gem "pg", "~> 1.5"
 gem "rails", "~> 7.2"
 gem "seedbank", "~> 0.5.0"
 # gem 'sentry-rails', '~> 5.17', '>= 5.17.1'
@@ -16,7 +16,7 @@ gem "activerecord-import", "~> 1.8"
 gem "importmap-rails" # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "jbuilder" # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jsonapi-serializer", "~> 2.2"
-gem "puma", "~> 6.4" # Use the Puma web server [https://github.com/puma/puma]
+gem "puma", "~> 6.5" # Use the Puma web server [https://github.com/puma/puma]
 gem "redis", "~> 5.3" # Use Redis adapter to run Action Cable in production
 
 gem "sassc", "~> 2.4" # TODO; after the gem catches with modern syntax in tailwind remove the disabling of
@@ -25,13 +25,13 @@ gem "sassc", "~> 2.4" # TODO; after the gem catches with modern syntax in tailwi
 gem "sassc-rails", "~> 2.1", ">= 2.1.2"
 gem "sprockets-rails" # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "stimulus-rails" # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "tailwindcss-rails", "~> 2.7"
+gem "tailwindcss-rails", "~> 3.0"
 gem "turbo-rails" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 # gem "kredis" # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", require: false # Reduces boot times through caching; required in config/boot.rb
-gem "dotenv-rails", "~> 3.1", ">= 3.1.2"
-gem "ruby-openai", "~> 7.1"
+gem "dotenv-rails", "~> 3.1"
+gem "ruby-openai", "~> 7.3"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 # gem "sassc-rails" # Use Sass to process CSS
 # gem "image_processing", "~> 1.2"
@@ -85,17 +85,17 @@ gem "amazing_print", "~> 1.6", require: false
 
 group :development do
   gem "annotate", "~> 3.2"
-  gem "bullet", "~> 7.2"
+  gem "bullet", "~> 8.0"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   # gem "capybara", "~> 3.40"
   gem "debug", platforms: %i[mri mingw x64_mingw]
   # gem "parallel", "~> 1.24"
-  gem "execjs", "~> 2.9", ">= 2.9.1" # required after adding the pre-commit
+  gem "execjs", "~> 2.10" # required after adding the pre-commit
   gem "pre-commit", "~> 0.40.0", require: false
-  gem "rubocop", "~> 1.66", require: false
-  gem "rubocop-performance", "~> 1.21", ">= 1.21.1"
-  gem "rubocop-rails", "~> 2.25", ">= 2.25.1", require: false # update causing problems, leaving old version for now
-  gem "rubocop-rspec", "~> 2.29" # update causing problems, leaving old version for now
+  gem "rubocop", "~> 1.69", require: false
+  gem "rubocop-performance", "~> 1.23"
+  gem "rubocop-rails", "~> 2.27", require: false # update causing problems, leaving old version for now
+  gem "rubocop-rspec", "~> 3.2" # update causing problems, leaving old version for now
   gem "web-console", "~> 4.2", ">= 4.2.1"
   # Review tools
   gem "faraday-retry", "~> 2.2", ">= 2.2.1"
@@ -105,9 +105,9 @@ group :development do
 end
 
 group :development, :test do
-  gem "factory_bot_rails", "~> 6.4", ">= 6.4.3"
-  gem "faker", "~> 3.4", ">= 3.4.2"
-  gem "rspec-rails", "~> 6.1"
+  gem "factory_bot_rails", "~> 6.4"
+  gem "faker", "~> 3.5"
+  gem "rspec-rails", "~> 7.1"
 end
 
 group :test do
